@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,23 +30,32 @@
                 <div><button class="btn third" ><a href="#" >LO MAS VISTO</a> </button></div>
                 <div><button class="btn third"><a href="#" >RECIENTES</a> </button></div>
                 
-                <div id="busca">
-                    <input id="busc" type="text" placeholder="Search">
-                    <button>
-                        <img id="lupa" src="./MEDIA/lupa.png" alt="imagen">
-                      </button>
+                <div class="container">
+                    <div class="row">
+                        <form id="search_form" class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="Placeholder" name="search" id="search" type="text" class="validate">
+                                    <button  onclick='mialerta'>
+                                        <img id="lupa" src="./MEDIA/lupa.png" alt="imagen">
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                    
+                    
                 </div>
             </div>
-            <div id="padre123">
-                <div id="pep">
-                    <div><h1 id="tit"> HOLA</h1></div>
-                    <div><img id="fot"  src="./MEDIA/Los 80 como mantra.png" alt=""></div>
-                    <div id="tam_le"><p id="res">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod at quae reiciendis corrupti magni non vitae, dolore ad rem numquam laboriosam laborum sit cumque voluptas perferendis eos molestias vel. Pariatur?</p></div>
-                </div>
-            </div>    
-            <div id="rest"></div>
+            <div id="search-results" class="container"></div>
+             
+        
         </div>
+        <script defer src="./JAVA/java_s.js"></script>
     </main>
-    <footer><p>siguenos en instagram</p></footer>  
+    <footer></footer>  
 </body>
 </html>
+

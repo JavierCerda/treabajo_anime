@@ -6,15 +6,17 @@
   }
 
 
-  html, body {
+  html, body, main {
     font-family: 'Century Gothic', sans-serif;
-    background: rgb(6,36,0);
-    background: linear-gradient(90deg, rgb(39, 43, 43) 0%, rgba(88,9,121,1) 39%, rgba(0,212,255,1) 100%);
     display: flex;
     min-height: 100%;
     min-width: 100%;
     flex-direction: column;
     align-items: center;
+  }
+  body{
+    background-image: url("../MEDIA/fondo.jpg");
+
   }
   
   #padre{
@@ -50,20 +52,20 @@ header {
 }
 
 
-
 #menu{
-    width: 100%;
+    width: 85%;
     height: 100%;
-    background-color:rgba(0, 247, 255, 0.23);
+    background-color:rgba(8, 213, 236, 0.379);
     display:flex;
     align-items: center;
     justify-content: space-around;
-    padding: 20px;
-    gap: 20px;
+    padding: 15px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 5px;
+    justify-items: center;
+    align-items: center;
 }
 
 .btn{
@@ -109,13 +111,12 @@ header {
       text-decoration:none;
 
   }
-  #busca{
+  .col{
    display: flex;
    gap: 0;
 
   }
   #busc{
-    display: flex;
     height: 30px;
     width: 100%;
   }
@@ -131,7 +132,7 @@ header {
    
   }
   #tam_le{
-   padding: 30px;
+   padding: 40px;
   }
   #pep{
     margin-top: 50px;
@@ -142,8 +143,4 @@ header {
     gap: 10px;
   }
 
-  footer{
-    height: 20px;
-    color: rgb(0, 0, 0);
-    background-color: #3498db5e;
-  }
+ 
