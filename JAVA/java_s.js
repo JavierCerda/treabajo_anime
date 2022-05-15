@@ -1,38 +1,46 @@
+/*Aqui esta el archivo de javaScript*/
+/*Esta constante lo que hace es enlazar con la url de la api*/
 const base_url = "https://api.jikan.moe/v3";
 
-
-function searchAnime(event){
+/*Esta funcion es la que busca el anime y lo pasa a un json*/
+function buscaAnime(event){
 
     event.preventDefault();
 
     const form = new FormData(this);
-    const query = form.get("search");
+    const query = form.get("buscador");
 
     fetch(`${base_url}/search/anime?q=${query}&page=1&limit=1`)
-    .then(res=>res.json())
-    .then(updateDom)
-    .catch(err=>console.warn(err.message));
+    .then(res=>res.json()) .then(funcionPrin) .catch(errorFuction)
+   
+    
 }
+/*Esta funcion es la del error*/
+function errorFuction(){
+    return `<h1>error</h1>`
+}
+/*Esto es la funcion donde devuelve el resultado de la busqueda enlazado con las etiquetas de css para darle estilo*/
+function funcionPrin(data){
 
-function updateDom(data){
-
-    const searchResults = document.getElementById('search-results');
+    const buscaResults = document.getElementById('busca-results');
 
     const animeByCategories = data.results
-        .reduce((acc, anime)=>{
+        .reduce((lar, anime)=>{
 
-            const {type} = anime;
-            if(acc[type] === undefined) acc[type] = [];
-            acc[type].push(anime);
-            return acc;
+            const {name} = anime;
+            if(lar[name] === undefined) lar[name] = [];
+            lar[name].push(anime);
+            return lar;
 
         }, {});
 
-        searchResults.innerHTML = Object.keys(animeByCategories).map(key=>{
+        
+
+        buscaResults.innerHTML = Object.keys(animeByCategories).map(key=>{
 
             const animesHTML = animeByCategories[key]
             .map(anime=>{
-            
+               
                 return `
                 <div id="padre123">
                 <div id="pep">
@@ -51,13 +59,15 @@ function updateDom(data){
                     <div class="kemicofa-row">${animesHTML}</div>
                 </section>
             `
+            
         }).join("");
+    
+}
+/*Esta funcion es para recargar la pagina*/
+function recargar_pag(){
+    const form = document.getElementById('busca_form');
+    form.addEventListener("submit", buscaAnime);
 }
 
-function pageLoaded(){
-    const form = document.getElementById('search_form');
-    form.addEventListener("submit", searchAnime);
-}
-
-
-window.addEventListener("load", pageLoaded);
+/*Esto de aqui tambien es para recargar la pagina*/
+window.addEventListener("load", recargar_pag);

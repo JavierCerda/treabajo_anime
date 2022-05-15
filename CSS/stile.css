@@ -53,26 +53,26 @@ header {
 
 
 #menu{
-    width: 85%;
-    height: 100%;
-    background-color:rgba(8, 213, 236, 0.379);
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 15px;
-    border-radius: 15px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 5px;
-    justify-items: center;
-    align-items: center;
+  width: 85%;
+  height: 100%;
+  background-color:rgba(8, 213, 236, 0.379);
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5px;
+  justify-items: center;
+  align-items: center;
 }
 
 .btn{
-   box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border: 2px solid #e74c3c;
   border-radius: 0.6em;
@@ -81,8 +81,8 @@ header {
   
   display: flex;
   -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
@@ -106,41 +106,40 @@ header {
   box-shadow: 0 0 10px 0 #246998 inset, 0 0 10px 4px #1d577e;
 }
 
-  a{
-      color: white;
-      text-decoration:none;
+a{
+  color: white;
+  text-decoration:none;
 
-  }
-  .col{
-   display: flex;
-   gap: 0;
+}
+.col{
+  display: flex;
+  gap: 0;
 
-  }
-  #busc{
-    height: 30px;
-    width: 100%;
-  }
-  #lupa{
-    width: 15px;
-    height: 10px;
-  }
+}
+#busca{
+  height: 30px;
+  width: 100%;
+}
+#lupa{
+  width: 15px;
+  height: 10px;
+}
 
-  #fot{
-    height: 200px;
-    width: 130px;
-    border-radius: 12px;
-   
-  }
-  #tam_le{
-   padding: 40px;
-  }
-  #pep{
-    margin-top: 50px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    color: aliceblue;
-    gap: 10px;
-  }
+#fot{
+  height: 200px;
+  width: 130px;
+  border-radius: 12px;
+}
+#tam_le{
+ padding: 40px;
+}
+#pep{
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: aliceblue;
+  gap: 10px;
+}
 
  

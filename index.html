@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <!-- Aqui tenemos los enlaces a a css y el icono de la pagina-->
+    <link rel="icon" href="./MEDIA/Los 80 como mantra.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./CSS/stile.css" rel="stylesheet" type="text/css">    
     <title>Rincón anime</title>
 </head>
+<!-- Aqui tenemos el body-->
 <body>
+    <!-- Aqui tenemos el header-->
     <header>
-       
-            <div id="padre">
-                <div ><img id="logo" src="./MEDIA/Los 80 como mantra.png"></div>
-                <div>
-                    <h3 id="h31">Rincón</h3>
-                    <h3>Anime</h3>
-                </div>    
+        <!-- Aqui esta el logo de la pagina-->
+        <div id="padre">
+            <div >
+                <img id="logo" src="./MEDIA/Los 80 como mantra.png">
             </div>
-           
-            
-         
+            <div>          
+                <h3 id="h31">Rincón</h3>
+                <h3>Anime</h3>
+            </div>    
+        </div>         
     </header>
+    <!-- Aqui tenemos el main-->
+
     <main>
         <div id="todo">
             <div id="menu">
-        
+                <!-- Aqui esta el cuadro donde estan los botones de inicio, lo mas visto, recientes, y el buscador-->
                 <div><button class="btn third"><a href="#" >INICIO</a> </button></div>
                 <div><button class="btn third" ><a href="#" >LO MAS VISTO</a> </button></div>
-                <div><button class="btn third"><a href="#" >RECIENTES</a> </button></div>
-                
-                <div class="container">
-                    <div class="row">
-                        <form id="search_form" class="col s12">
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input placeholder="Placeholder" name="search" id="search" type="text" class="validate">
-                                    <button  onclick='mialerta'>
-                                        <img id="lupa" src="./MEDIA/lupa.png" alt="imagen">
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                <div><button class="btn third"><a href="#" >RECIENTES</a> </button></div> 
+                <!-- Aqui tenemos el buscador y el boton para buscar-->   
+                <form id="busca_form">
+                    <div>
+                        <div class="col">
+                            <input placeholder="Naruto,Boruto,one piece" name="buscador" id="busca" type="text">
+                            <button >
+                                <img id="lupa" src="./MEDIA/lupa.png" alt="imagen">
+                            </button>
+                        </div>
                     </div>
-                </div>
-                
-                    
-                    
-                </div>
+                </form>      
             </div>
-            <div id="search-results" class="container"></div>
-             
-        
         </div>
-        <script defer src="./JAVA/java_s.js"></script>
+        <!-- Aqui tenemos los resultados que va a tener la pagina-->
+        <div id="busca-results"></div>
+             
+    <!-- Aqui tenemos el enlace con la pagina-->  
+    <script defer src="./JAVA/java_s.js"></script>
     </main>
+    <!-- Aqui tenemos el footer-->
     <footer></footer>  
 </body>
 </html>
